@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const optionsInput = document.getElementById('options');
     const sendBtn = document.querySelector('.cta');
     const resultDiv = document.getElementById('result');
-    const OPENAI_API_KEY = "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";
+    const OPENAI_API_KEY = "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";
     const helloImg = document.getElementById("hello");
     
     
