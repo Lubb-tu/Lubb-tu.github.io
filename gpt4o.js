@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const optionsInput = document.getElementById('options');
     const sendBtn = document.querySelector('.cta');
     const resultDiv = document.getElementById('result');
-    const OPENAI_API_KEY ="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";
+    const OPENAI_API_KEY = "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";
 
         // ------ فتح/إغلاق السايدبار عند النقر عليه ------
         sidebar.addEventListener("click", (e) => {
