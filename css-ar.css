@@ -714,7 +714,7 @@ margin-bottom: -10px;
     .first{
         width: 250px !important;
         top: 120px;
-        align-self: center;
+        align-self: right;
     }
     .second{
         width: 450px !important;
@@ -766,9 +766,7 @@ margin-bottom: -10px;
         font-size: 1.5rem !important;
        
     }
-    .about_text h2{
-    white-space: nowrap !important;
-    }
+ 
   }
 
   /*________________________________*/
@@ -893,3 +891,100 @@ margin-bottom: -10px;
     direction: ltr;
     unicode-bidi: bidi-override;
 }
+
+/* ------------------------------ */
+/* 🟢 Media Queries for Responsiveness */
+/* ------------------------------ */
+
+/* ✅ للأجهزة المتوسطة (تابلت مثلاً) */
+@media (max-width: 1024px) {
+    #services .section-title {
+      font-size: 5rem !important;
+      margin-bottom: -20px;
+      align-self: center;
+      text-align: center;
+    }
+  
+    #services .service-top {
+      width: 90%;
+      align-items: center;
+    }
+  
+    #services .service-buttom {
+      grid-template-columns: 1fr;
+      padding: 10px;
+    }
+  
+    #services .service-item_1,
+    #services .service-item_2 {
+      height: 300px;
+    }
+  
+    .image-container,
+    .image-container1 {
+      height: 200px;
+    }
+  
+    #services .service-item_1 h2,
+    #services .service-item_2 h2 {
+      font-size: 2.5rem;
+    }
+  
+    #services .service-item_1 h3,
+    #services .service-item_2 h3 {
+      font-size: 1.6rem;
+    }
+  
+    #services .service-item_1 p,
+    #services .service-item_2 p {
+      font-size: 1.4rem;
+    }
+  }
+  
+  /* ✅ للجوالات (شاشات صغيرة جداً) */
+  @media (max-width: 600px) {
+    #services {
+      padding: 60px 0;
+    }
+  
+    #services .section-title {
+      font-size: 2.4rem;
+      margin-bottom: -10px;
+    }
+  
+    #services .service-top {
+      width: 95%;
+    }
+  
+    #services .service-buttom {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  
+    #services .service-item_1,
+    #services .service-item_2 {
+      height: 270px;
+      padding: 10px;
+    }
+  
+    .image-container,
+    .image-container1 {
+      height: 160px;
+    }
+  
+    #services .service-item_1 h2,
+    #services .service-item_2 h2 {
+      font-size: 2rem;
+    }
+  
+    #services .service-item_1 h3,
+    #services .service-item_2 h3 {
+      font-size: 1.4rem;
+    }
+  
+    #services .service-item_1 p,
+    #services .service-item_2 p {
+      font-size: 1.2rem;
+    }
+  }
+  
