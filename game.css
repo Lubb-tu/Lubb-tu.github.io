@@ -1236,3 +1236,444 @@ font-size: 10rem !important;
   margin-bottom: 20px;
   margin-top: -20px;
 }
+
+
+@media (max-width: 768px) {
+     
+  .welcome h1 {
+      font-size: 3rem;
+  }
+  
+  .welcome h3 {
+      font-size: 1.6rem;
+  }
+  html {
+      font-size: 8px;
+  }
+  .profession{
+      font-size: 2.5rem;
+  }
+  .sidebar li .text {
+      font-size: 2rem !important;
+  }
+
+  .home-text {
+      position: center;
+  }
+
+  .home-text h1 {
+      font-size: 3rem;
+  }
+
+
+  .analogy-question {
+      display: block;
+      width: 60%;
+      font-size: 1.6rem;
+      margin-bottom: 10px;
+      text-align: right; /* لو كنت تستخدم تخطيط RTL */
+    }
+    
+  .home-text input[type="text"],
+  .home-text textarea {
+      width: 100%;
+      font-size: 1.2rem;
+  }
+
+
+
+  .brand h1 {
+      font-size: 3rem;
+  }
+  
+
+  .section-title {
+      font-size: 3rem;
+  }
+
+}
+/* تأثير الحركة عند دخول المحتوى */
+/* تأثير الحركة عند دخول المحتوى */
+@keyframes slideIn {
+  from {
+      transform: translateX(-100%); /* يبدأ من خارج الشاشة على اليسار */
+      opacity: 0; /* يبدأ غير مرئي */
+  }
+  to {
+      transform: translateX(0); /* يصل للمكان الطبيعي */
+      opacity: 1; /* يصبح مرئيًا */
+  }
+}
+
+/* تأثير الـ fade-in مع الحركة */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(20px); /* يدخل من الأسفل */
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0); /* يصل للمكان الطبيعي */
+  }
+}
+
+.lubb {
+  width: 70px; margin-right: -2px; margin-top: 10px;
+}
+/*______________________________________________________________________*/
+
+
+/* إعدادات الاستجابة للهواتف */
+@media (max-width: 768px) {
+  .brand{
+      font-size: 4rem;
+  }
+  .home-text {
+      align-items: center;
+
+  }
+  hi{
+      width: 400px;
+  }
+
+  .welcome{
+      white-space: nowrap !important;
+
+  }
+  .home-text {
+      padding: 130px !important;
+      align-items: center !important;
+      animation: fadeIn 1s ease-in; 
+      min-width: 500px
+  }
+  .home-text input[type="text"],
+  .home-text textarea,
+   .response{
+      width: 500px !important;
+      font-size: 1.5rem;
+  }
+  .home-text button.cta {
+      align-self: flex; /* محاذاة لليمين */
+      margin-right: -50rem; /* نفس هامش الـ input */
+      width: 30px; 
+      height: 30px;/* عرض مناسب */
+      margin-top: -40px; /* مسافة من الأعلى */
+      z-index: 10;
+      font-size: 0.8rem !important;
+  }
+  h1, h2, h3 {
+      font-size: 2rem; /* تقليل حجم العناوين */
+  }
+  p, label, input, textarea {
+      font-size: 1.4rem; /* تقليل حجم النصوص */
+  }
+  h1 {
+      font-size: 3rem;
+  }
+  .section-title {
+      font-size: 3rem;
+  }
+  .model-box{
+      left: 570px !important;
+      top: 20px;
+      z-index: 2;
+  }
+  .model-box .model-selector {
+      min-width: 110px ;
+      left: 30px;
+      top: 27px;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .home-text {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  /* تعديل عرض السايدبار عند الإغلاق */
+
+  .sidebar.close {
+    width: 65px !important;
+    padding: 5px;
+    font-size: 0px;
+  }
+  .sidebar.close .img.lubb { /* إضافة علامة img لزيادة التحديد */
+      display: flex !important;/* إضافة height لتجنب التشويه */
+  }
+  .sidebar.close .text{
+      display: none;
+  }
+  /* إظهار زر التoggle في وضع الجوال */
+  .sidebar header .toggle {
+    display: block !important;
+    right: 10px;
+    top: 20px;
+  }
+  
+  /* تعديل موضع العناصر عند الفتح */
+  .sidebar:not(.close) {
+    width: 280px !important;
+    z-index: 4;
+  }
+  .sidebar .lubb {
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+  }
+
+  .sidebar:not(.close) .text {
+    font-size: 18px !important;
+    opacity: 1 !important;
+  }
+  .loading{
+      align-self: center;
+      margin-left: 115px !important;
+  }
+  .error{
+      align-self: center;
+      width: 100px;
+      font-size: 10px;
+      margin-left: 115px !important;
+
+  }
+  li.mode .mode-text {
+      flex: 1; /* يسمح للنص بتمدد المساحة بين الأيقونة والسويتش */
+      margin-left: 0px;
+      margin-top: 80px;
+  }
+  li.mode .icon {
+      flex: 1; /* يسمح للنص بتمدد المساحة بين الأيقونة والسويتش */
+      margin-right: 2px;
+      padding: 0px;
+      gap: 0px;
+      margin-top: 80px;    
+      margin-left: 5px;
+      font-size: 20px;
+  }
+  li.mode a:hover .icon{
+      color:#A8D0CF;
+  }
+  .menu-bar .mode .toggle-switch{
+
+      width: 25px;
+      height: 20px;
+      margin-left: 5px;
+      margin-bottom: 10px;
+      margin-top: 110px;
+      
+  }
+  .toggle-switch .switch {
+      height: 20px;
+      width: 40px;
+      margin-top: -15px;
+    }
+}
+@media (max-width: 768px) {
+  .sidebar:not(.close) li {
+    justify-content: flex-start;
+    padding-left:  15px;
+  }
+  
+  .sidebar:not(.close) .icon {
+    margin-left: 10px;
+  }
+  .sidebar:not(.close) .model-box .buttun{
+      visibility: hidden !important;
+      opacity: 0 !important;
+     
+      pointer-events: none;
+    }
+    .sidebar:not(.close) li.mode .icon {
+      flex: 1; /* يسمح للنص بتمدد المساحة بين الأيقونة والسويتش */
+      margin-left: 20px
+    }
+    /* إظهار العنصر عند إغلاق القائمة */
+    .sidebar.close .model-box .buttun {
+      visibility: visible !important;
+      opacity: 1 !important;
+      pointer-events: auto;
+    }
+     
+.sidebar .bottom-content .mode{
+  padding-top: 1px;
+}
+.sidebar.close .bottom-content .mode{
+  padding-top: 0px;
+  margin-right: 0px;
+}
+
+}
+@media (max-width: 480px) {
+   
+  .welcome h1 {
+      font-size: 3rem;
+  }
+  
+  .welcome h3 {
+      font-size: 1.6rem;
+  }
+  .sidebar:not(.close) {
+      width: 500px !important;
+      z-index: 4;
+    }
+  .home-text {
+      align-items: center;
+
+  }
+  
+  .hi{
+      width: 300px !important;
+  }
+  .welcome{
+      white-space: nowrap !important;
+      font-size: 10px !important;
+
+  }
+  .home-text {
+      padding: 130px !important;
+      align-items: center !important;
+      animation: fadeIn 1s ease-in; 
+      margin-left: -10px !important;
+  }
+  .home-text input[type="text"],
+  .home-text textarea,
+   .response{
+      width: 350px !important;
+      font-size: 1.5rem;
+      align-self: center;
+  }
+  .home-text button.cta {
+      align-self: flex; /* محاذاة لليمين */
+      margin-right: -45rem; /* نفس هامش الـ input */
+      width: 30px; 
+      height: 30px;/* عرض مناسب */
+      margin-top: -40px; /* مسافة من الأعلى */
+      z-index: 10;
+      font-size: 0.8rem !important;
+      transform: rotate(180) !important;
+  }
+  h1, h2, h3 {
+      font-size: 1rem; /* تقليل حجم العناوين */
+  }
+  p, label, input, textarea {
+      font-size: 1rem; /* تقليل حجم النصوص */
+  }
+  h1 {
+      font-size: 3rem !important;
+  }
+  .section-title {
+      font-size: 3rem;
+  }
+  .model-box{
+      left: 300px !important;
+      top: 20px;
+      z-index: 2;
+  }
+  .model-box .model-selector {
+      min-width: 110px !important;
+      right: 15px;
+      top: 27px;
+  }
+
+ 
+ 
+}
+@media (max-width: 300px) {
+   
+  .welcome h1 {
+      font-size: 3rem;
+  }
+  
+  .welcome h3 {
+      font-size: 1.6rem;
+  }
+  .sidebar{
+      width: 20px !important;
+  }
+
+  .home-text {
+      align-items: center;
+      margin-right: 0px;
+  }
+  
+  
+  .hi{
+      width: 150px !important;
+      margin-left: 0px;
+      margin-left: 115px !important;
+
+  }
+  .welcome{
+      display: none;
+
+  }
+  .home-text {
+      padding: 170px !important;
+      align-items: center !important;
+      animation: fadeIn 1s ease-in; 
+      min-width: none;
+  }
+  .home-text input[type="text"],
+  .home-text textarea,
+   .response{
+      width: 185px !important;
+      font-size: 1.5rem;
+      align-self: center;
+      margin-right: 115px !important;
+  }
+  .home-text button.cta {
+      align-self: flex; /* محاذاة لليمين */
+      margin-right: -3rem; /* نفس هامش الـ input */
+      width: 25px; 
+      height: 25px;/* عرض مناسب */
+      margin-top: -40px; /* مسافة من الأعلى */
+      z-index: 10;
+      font-size: 0 !important;
+  }
+  .cta .i{
+      transform: rotate(-180) !important;
+      transform: scale(-1);
+
+  }
+  h1, h2, h3 {
+      font-size: 0.5rem; /* تقليل حجم العناوين */
+  }
+  p, label, input, textarea {
+      font-size: 5px; /* تقليل حجم النصوص */
+  }
+  h1 {
+      font-size: 0.5rem !important;
+  }
+  .section-title {
+      font-size: 3rem;
+  }
+
+  .model-box{
+      left: 120px !important;
+      top: 20px;
+      z-index: 2;
+  }
+  .model-box .model-selector {
+      min-width: 100px !important;
+      left: 35px;
+      top: 27px;
+  }
+  .loading{
+      align-self: center;
+      margin-left: 115px !important;
+  }
+  .error{
+      align-self: center;
+      width: 100px;
+      font-size: 10px;
+      margin-right: 115px !important;
+
+  }
+
+ 
+  
+}

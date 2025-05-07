@@ -1410,3 +1410,843 @@ body.dark .category-option:hover, body.dark .question-option:hover{
   font-size: 10rem !important;
 }
 
+
+
+/* للشاشات الصغيرة */
+@media (max-width: 768px) {
+  .home-text {
+      min-height: 50vh;
+      padding: 1rem;
+  }
+  
+  .welcome h1 {
+      font-size: 3rem;
+  }
+  
+  .welcome h3 {
+      font-size: 1.6rem;
+  }
+}
+/* توسّط محتوى الهوم */
+.home.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* لتوجيه المحتوى للأعلى */
+  min-height: 100vh;
+  text-align: center;
+  padding: 20px 0;
+  width: 1000px;
+/* يمكنك تغيير القيمة لتحديد المسافة من الأعلى */
+}
+/* إضافة هذه التعديلات */
+
+/* تصميم النموذج */
+.slover {
+  padding: 20px;
+  position:static;
+  top: auto;
+  left: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 700px;
+  border-radius: 1rem; 
+ 
+}
+
+/* تحسين شكل الإدخال والزر */  
+.home-text input,
+.home-text textarea {
+  resize: none; /* يمنع تغيير الحجم تمامًا */
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  font-size: 2rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-left: -50px;
+  overflow-y: auto;
+  padding-bottom: 80px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.home-text textarea::-webkit-scrollbar {
+  width: 18px !important; /* عرض السكرولبار */
+}
+.home-text textarea::-webkit-scrollbar-thumb {
+  background: #A8D0CF !important; /* لون السكرولبار */
+  border-radius: 6px !important; /* حواف دائرية */
+  border: 2px solid transparent !important; /* حدود شفافة */
+
+}
+
+.home-text textarea::-webkit-scrollbar-track {
+  background: rgba(168, 208, 207, 0.1) !important; /* لون الخلفية */
+  border-radius: 6px !important;
+  height: 10px;
+  padding: 10px;
+}
+
+
+
+.home-text {
+  position: relative;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+.home-text button.cta {
+  background-color: #A8D0CF;
+  padding: 0.4rem;
+  color: white;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+  font-size: 2rem;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  width: 40px;
+  height: 40px;
+  display: flex;            /* Enable flexbox */
+  align-items: center;      /* Vertically center the icon */
+  justify-content: center;  /* Horizontally center the icon */
+  gap: 8px;                 /* Optional: Add some space between icon and text if needed */
+}
+
+.home-text button.cta i {
+  font-size: 3rem;        /* Icon size */
+  display: inline-block;
+  position: static;
+  transform: scaleX(-1);
+  margin-left: -4px;
+}
+
+.home-text button.cta:hover {
+  background-color: transparent;
+  color:#A8D0CF;
+  border: 1px solid #A8D0CF;
+}
+
+body.dark .home-text button.cta {
+  background-color: #3b3b3b;
+  color: #ccc;
+}
+
+body.dark .home-text button.cta:hover {
+  background-color: transparent;
+  color: #A8D0CF;
+  border: 1px solid #A8D0CF;
+}
+
+
+/* لو عندك كلاس cta لحاله برا context */
+.cta .icon {
+  font-size: 1.2em;
+  display: inline-block;
+}
+
+.home-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* أو جرب flex-start إذا تبي النصوص تصطف بشكل طبيعي */
+  gap: 2px;
+  padding: 30px 20px;
+  width: 1000px;
+}
+.home-text h1 {
+  color: #333;
+}
+
+body.dark .home-text h1 {
+  color: #f5f5f5;
+}
+
+
+
+.home-text,
+.slover {
+  transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+.slover label {
+  position: static;
+  font-size: 1.6rem;
+  color: #333;
+  font-weight: 500;
+  align-self: flex-start;
+}
+body.dark .slover label {
+  color: #ccc;
+}
+body.dark .slover .placeholder{
+  color:#333;
+}
+.home-text input[type="text"],
+.home-text textarea {
+  width: 700px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  padding: 10px 15px;
+  font-size: 1.4rem;
+  color: #333;
+  background-color: var(--sidebar-color);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.home-text input[type="text"]:focus,
+.home-text textarea:focus {
+  border-color: #3F9896;
+  box-shadow: 0 0 8px #3F9896;
+  outline: none;
+}
+body.dark .home-text input[type="text"]:focus,
+body.dark .home-text textarea:focus {
+  border-color:#212121;
+  box-shadow: 0 0 8px #212121;
+  outline: none;
+}
+
+.home-text textarea {
+  min-height: 100px;
+  max-height: 300px;
+}
+body.dark input{
+  color: white; /* لون النص داخل الحقل */
+  background-color: #222; /* اختيارية: لون خلفية داكن */
+}
+body.dark textarea {
+color: white; /* لون النص داخل الحقل */
+background-color: #222; /* اختيارية: لون خلفية داكن */
+}
+
+body.dark input::placeholder,
+body.dark textarea::placeholder {
+color: #aaaaaa; /* لون النص الرمادي للمكان المخصص (placeholder) */
+}
+
+body.sidebar-collapsed .home-text {
+  transform: scale(1) translateX(-120px);
+  transition: transform 0.5s ease;
+}
+body:not(.sidebar-collapsed) .home-text {
+  transform: scale(1) translateX(0); /* العودة إلى المكان الأصلي */
+  transition: transform 0.5s ease; /* تأثير سلس */
+}
+.home-text {
+  transition: transform 0.5s ease;
+}
+
+.slover {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  left: 50%;
+  width: 100%;
+  max-width: 700px;
+}
+
+.home-text {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  top: 50%;
+  left: 50%;
+  max-width: 100%;
+  transform: none;
+  position: static; 
+}
+
+
+.home-text.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.slover.active {
+  opacity: 1;
+  visibility: visible;
+}
+/* التعديلات المطلوبة لتحقيق ما تريده */
+.response {
+  width: 700px !important;
+  border-radius: 10px;
+  padding: 10px 15px;
+  color: #333;
+  background-color: var(--sidebar-color);
+  margin-top: 10px; /* مسافة من العناصر الأعلى */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* نفس ظل الإدخال */
+  transition: border-color 0.3s ease; /* تأثيرات متناسقة */
+  margin-left: -49px;
+  overflow-y: auto;
+  text-align: right;
+  font-size: 1.4rem; 
+}
+
+.response p {
+  white-space: pre-wrap;
+  line-height: 1.6;
+  background-color: transparent; /* إزالة الخلفية المكررة */
+  color: var(--text-color); /* استخدام المتغير للنصوص */
+  margin: 10px 0;
+  padding: 8px;
+}
+/* الوضع الداكن */
+body.dark .response {
+  background-color: #363636 !important;
+  border-color: #363636;
+  color: white;
+}
+
+.response strong {
+  color: #2c3e50;
+  font-weight: 600;
+  padding: 2px 5px;
+  border-radius: 4px;
+}
+body.dark  .response strong {
+  color:#A8D0CF;
+}
+/* تعديل الهيكل العام لاحتواء العناصر */
+.home.container {
+  gap: 30px; /* مسافة بين العناصر الرئيسية */
+  padding-bottom: 50px; /* مسافة أسفل الصفحة */
+}
+
+.error {
+  color: #e74c3c;
+  padding: 0px 5px 10px 10px ;
+  background: #fdeded;
+  border-radius: 5px;
+  font-size: 2rem;
+  margin-left: -60px;
+}
+.loading {
+  animation: pulse 1.5s infinite;
+  color: #666;
+  text-align: center;
+  font-size: 1.5rem;
+  margin-left: -60px;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+pre {
+  white-space: pre-wrap;
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+}
+body.dark pre{
+  background: #363636;
+  border: 1px solid #555;
+}
+
+h3.welcome {
+  font-size: 1.5rem;  /* Slightly smaller for the subheading */
+  color: #555;  /* Lighter color for the subheading */
+
+}
+
+
+/*__________________________*/
+.model-box {
+  display: inline-block;
+  position: absolute;
+  top: 30px;
+  left: 30px; /* أو حسب مكانك المفضل */
+  z-index: 4;
+  font-family: 'Poppins' !important;
+}
+
+.model-box button {
+  font-family: 'Poppins' !important;
+  width: 150px !important;                   /* تثبيت العرض */
+  padding: 8px 12px;              /* مسافة داخلية */ /* لون خفيف جدًا */
+  color: var(--text-color);       /* لون النص */
+  border: none;
+  border-radius: 8px;             /* حواف ناعمة */
+  cursor: pointer;
+  display: flex;                  /* لترتيب النص والأيقونة */
+  align-items: center;
+  justify-content: center; /* النص يسار والأيقونة يمين */
+  font-size: 1.9rem;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  background-color: transparent;
+}
+
+
+.model-box a {
+  display: block;
+  color: var(--text-color);
+  text-decoration: none;
+  padding: 5px;
+}
+.model-box .model-selector {
+  position: absolute;
+  top: 34px;               /* أسفل الزر مباشرة */
+  left: 2px;                /* في أقصى اليمين */
+  right: auto;
+  display: none;
+  background-color: var(--sidebar-color);
+  min-width: 140px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.082);
+  z-index: 999;   
+  font-size: 1.5rem;   
+  text-align: center; 
+  align-items: center; 
+  font-family: 'Poppins' !important;    /* مهم لو في عناصر تغطي عليها */
+}
+
+.model-box:hover .model-selector {
+  display: block;
+}
+
+.model-box:hover button {
+  color: snow;
+  text-decoration-color: snow;
+  
+}
+.model-box:hover button .label {
+  text-decoration-color: var(--sidebar-color);
+  
+}
+.model-box button .label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.model-box button i {
+  transition: transform 0.3s ease;
+}
+
+
+body.dark .model-box .model-selector{
+  background-color: var(--sidebar-color);
+}
+.model-box a:hover {
+  color: #A8D0CF;
+}
+
+
+/*___________________________________________________________*/
+
+
+@media (max-width: 768px) {
+  html {
+      font-size: 8px;
+  }
+  .profession{
+      font-size: 2.5rem;
+  }
+  .sidebar li .text {
+      font-size: 2rem !important;
+  }
+
+  .home-text {
+      position: center;
+  }
+
+  .home-text h1 {
+      font-size: 3rem;
+  }
+
+
+  .analogy-question {
+      display: block;
+      width: 60%;
+      font-size: 1.6rem;
+      margin-bottom: 10px;
+      text-align: right; /* لو كنت تستخدم تخطيط RTL */
+    }
+    
+  .home-text input[type="text"],
+  .home-text textarea {
+      width: 100%;
+      font-size: 1.2rem;
+  }
+
+
+
+  .brand h1 {
+      font-size: 3rem;
+  }
+  
+
+  .section-title {
+      font-size: 3rem;
+  }
+
+}
+/* تأثير الحركة عند دخول المحتوى */
+/* تأثير الحركة عند دخول المحتوى */
+@keyframes slideIn {
+  from {
+      transform: translateX(-100%); /* يبدأ من خارج الشاشة على اليسار */
+      opacity: 0; /* يبدأ غير مرئي */
+  }
+  to {
+      transform: translateX(0); /* يصل للمكان الطبيعي */
+      opacity: 1; /* يصبح مرئيًا */
+  }
+}
+
+/* تأثير الـ fade-in مع الحركة */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(20px); /* يدخل من الأسفل */
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0); /* يصل للمكان الطبيعي */
+  }
+}
+
+.lubb {
+  width: 70px; margin-right: -2px; margin-top: 10px;
+}
+/*______________________________________________________________________*/
+
+
+/* إعدادات الاستجابة للهواتف */
+@media (max-width: 768px) {
+
+  .home-text {
+      align-items: center;
+
+  }
+  hi{
+      width: 400px;
+  }
+
+  .welcome{
+      white-space: nowrap !important;
+
+  }
+  .home-text {
+      padding: 130px !important;
+      align-items: center !important;
+      animation: fadeIn 1s ease-in; 
+      min-width: 500px
+  }
+  .home-text input[type="text"],
+  .home-text textarea,
+   .response{
+      width: 500px !important;
+      font-size: 1.5rem;
+  }
+  .home-text button.cta {
+      align-self: flex; /* محاذاة لليمين */
+      margin-left: -62rem; /* نفس هامش الـ input */
+      width: 30px; 
+      height: 30px;/* عرض مناسب */
+      margin-top: -40px; /* مسافة من الأعلى */
+      z-index: 10;
+      font-size: 0.8rem !important;
+  }
+  h1, h2, h3 {
+      font-size: 2rem; /* تقليل حجم العناوين */
+  }
+  p, label, input, textarea {
+      font-size: 1.4rem; /* تقليل حجم النصوص */
+  }
+  h1 {
+      font-size: 3rem;
+  }
+  .section-title {
+      font-size: 3rem;
+  }
+  .model-box{
+      left: -10px;
+      top: 20px;
+      z-index: 2;
+  }
+  .model-box .model-selector {
+      min-width: 110px !important;
+      left: 15px;
+      top: 27px;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .home-text {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  /* تعديل عرض السايدبار عند الإغلاق */
+
+  .sidebar.close {
+    width: 65px !important;
+    padding: 5px;
+    font-size: 0px;
+  }
+  .sidebar.close .img.lubb { /* إضافة علامة img لزيادة التحديد */
+      display: flex !important;/* إضافة height لتجنب التشويه */
+  }
+  .sidebar.close .text{
+      display: none;
+  }
+  /* إظهار زر التoggle في وضع الجوال */
+  .sidebar header .toggle {
+    display: block !important;
+    right: 10px;
+    top: 20px;
+  }
+  
+  /* تعديل موضع العناصر عند الفتح */
+  .sidebar:not(.close) {
+    width: 280px !important;
+    z-index: 4;
+  }
+  .sidebar .lubb {
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+  }
+
+  .sidebar:not(.close) .text {
+    font-size: 18px !important;
+    opacity: 1 !important;
+  }
+  .loading{
+      align-self: center;
+      margin-left: 115px !important;
+  }
+  .error{
+      align-self: center;
+      width: 100px;
+      font-size: 10px;
+      margin-left: 115px !important;
+
+  }
+  li.mode .mode-text {
+      flex: 1; /* يسمح للنص بتمدد المساحة بين الأيقونة والسويتش */
+      margin-right: -5px;
+      margin-top: 80px;
+  }
+  li.mode .icon {
+      flex: 1; /* يسمح للنص بتمدد المساحة بين الأيقونة والسويتش */
+      margin-right: 2px;
+      padding: 0px;
+      gap: 0px;
+      margin-top: 80px;    
+      margin-left: 0px;
+  }
+  li.mode a:hover .icon{
+      color:#A8D0CF;
+  }
+  .menu-bar .mode .toggle-switch{
+
+      width: 25px;
+      height: 20px;
+      margin-right: 165px;
+      margin-bottom: 10px;
+      margin-top: 110px;
+      
+  }
+  .toggle-switch .switch {
+      height: 20px;
+      width: 40px;
+      margin-left: -75px;
+  
+    }
+}
+@media (max-width: 768px) {
+  .sidebar:not(.close) li {
+    justify-content: flex-start;
+    padding-right: 15px;
+  }
+  
+  .sidebar:not(.close) .icon {
+    margin-left: 10px;
+  }
+  .sidebar:not(.close) .model-box .buttun{
+      visibility: hidden !important;
+      opacity: 0 !important;
+     
+      pointer-events: none;
+    }
+    .sidebar:not(.close) li.mode .icon {
+      flex: 1; /* يسمح للنص بتمدد المساحة بين الأيقونة والسويتش */
+      margin-right: 20px
+    }
+    /* إظهار العنصر عند إغلاق القائمة */
+    .sidebar.close .model-box .buttun {
+      visibility: visible !important;
+      opacity: 1 !important;
+      pointer-events: auto;
+    }
+     
+.sidebar .bottom-content .mode{
+  padding-top: 1px;
+}
+.sidebar.close .bottom-content .mode{
+  padding-top: 0px;
+  margin-left: 0px;
+}
+
+}
+@media (max-width: 480px) {
+  .sidebar:not(.close) {
+      width: 500px !important;
+      z-index: 4;
+    }
+  .home-text {
+      align-items: center;
+
+  }
+  
+  .hi{
+      width: 300px !important;
+  }
+  .welcome{
+      white-space: nowrap !important;
+      font-size: 10px !important;
+
+  }
+  .home-text {
+      padding: 130px !important;
+      align-items: center !important;
+      animation: fadeIn 1s ease-in; 
+      margin-right: -10px !important;
+  }
+  .home-text input[type="text"],
+  .home-text textarea,
+   .response{
+      width: 350px !important;
+      font-size: 1.5rem;
+      align-self: center;
+  }
+  .home-text button.cta {
+      align-self: flex; /* محاذاة لليمين */
+      margin-left: -45rem; /* نفس هامش الـ input */
+      width: 30px; 
+      height: 30px;/* عرض مناسب */
+      margin-top: -40px; /* مسافة من الأعلى */
+      z-index: 10;
+      font-size: 0.8rem !important;
+  }
+  h1, h2, h3 {
+      font-size: 0.7rem; /* تقليل حجم العناوين */
+  }
+  p, label, input, textarea {
+      font-size: 1rem; /* تقليل حجم النصوص */
+  }
+  h1 {
+      font-size: 0.5rem !important;
+  }
+  .section-title {
+      font-size: 3rem;
+  }
+  .model-box{
+      left: -10px;
+      top: 20px;
+      z-index: 2;
+  }
+  .model-box .model-selector {
+      min-width: 110px !important;
+      left: 15px;
+      top: 27px;
+  }
+
+ 
+ 
+}
+@media (max-width: 300px) {
+  .sidebar{
+      width: 20px !important;
+  }
+
+  .home-text {
+      align-items: center;
+      margin-left: 0px;
+  }
+  
+  
+  .hi{
+      width: 150px !important;
+      margin-left: 0px;
+      margin-left: 115px !important;
+
+  }
+  .welcome{
+      display: none;
+
+  }
+  .home-text {
+      padding: 170px !important;
+      align-items: center !important;
+      animation: fadeIn 1s ease-in; 
+      min-width: none;
+  }
+  .home-text input[type="text"],
+  .home-text textarea,
+   .response{
+      width: 185px !important;
+      font-size: 1.5rem;
+      align-self: center;
+      margin-left: 115px !important;
+  }
+  .home-text button.cta {
+      align-self: flex; /* محاذاة لليمين */
+      margin-left: -3rem; /* نفس هامش الـ input */
+      width: 25px; 
+      height: 25px;/* عرض مناسب */
+      margin-top: -40px; /* مسافة من الأعلى */
+      z-index: 10;
+      font-size: 0 !important;
+  }
+  h1, h2, h3 {
+      font-size: 0.5rem; /* تقليل حجم العناوين */
+  }
+  p, label, input, textarea {
+      font-size: 5px; /* تقليل حجم النصوص */
+  }
+  h1 {
+      font-size: 0.5rem !important;
+  }
+  .section-title {
+      font-size: 3rem;
+  }
+  .model-box{
+      left: -10px;
+      top: 20px;
+      z-index: 2;
+  }
+  .model-box .model-selector {
+      min-width: 110px !important;
+      left: 15px;
+      top: 27px;
+  }
+  .loading{
+      align-self: center;
+      margin-left: 115px !important;
+  }
+  .error{
+      align-self: center;
+      width: 100px;
+      font-size: 10px;
+      margin-left: 115px !important;
+
+  }
+
+ 
+  
+}

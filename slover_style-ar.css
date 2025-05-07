@@ -1176,13 +1176,14 @@ body.dark .model-box .model-selector{
     li.mode .mode-text {
         flex: 1; /* يسمح للنص بتمدد المساحة بين الأيقونة والسويتش */
         margin-right: -5px;
+        margin-top: 80px;
     }
     li.mode .icon {
         flex: 1; /* يسمح للنص بتمدد المساحة بين الأيقونة والسويتش */
         margin-right: 2px;
         padding: 0px;
         gap: 0px;
-        margin-top: 0px;    
+        margin-top: 80px;    
         margin-left: 0px;
     }
     li.mode a:hover .icon{
@@ -1190,15 +1191,16 @@ body.dark .model-box .model-selector{
     }
     .menu-bar .mode .toggle-switch{
 
-        width: 50px;
-        height: 24px;
+        width: 25px;
+        height: 20px;
         margin-right: 165px;
-        margin-bottom: -17px;
-    
+        margin-bottom: 10px;
+        margin-top: 110px;
+        
     }
     .toggle-switch .switch {
-        height: 22px;
-        width: 44px;
+        height: 20px;
+        width: 40px;
         margin-left: -75px;
     
       }
@@ -1381,33 +1383,7 @@ body.dark .model-box .model-selector{
         margin-left: 115px !important;
 
     }
-    li.mode .mode-text {
-        flex: 1; /* يسمح للنص بتمدد المساحة بين الأيقونة والسويتش */
-        margin-right: -5px;
-    }
-    li.mode .icon {
-        flex: 1; /* يسمح للنص بتمدد المساحة بين الأيقونة والسويتش */
-        margin-right: 2px;
-        padding: 0px;
-        gap: 0px;
-        margin-top: 0px;    
-        margin-left: 0px;
-    }
-    li.mode a:hover .icon{
-        color:#A8D0CF;
-    }
-    .menu-bar .mode .toggle-switch{
 
-        width: 50px;
-        height: 24px;
-        margin-right: 165px;
-        margin-bottom: -17px;
+   
     
-    }
-    .toggle-switch .switch {
-        height: 22px;
-        width: 44px;
-        margin-left: -75px;
-    
-      }
 }
