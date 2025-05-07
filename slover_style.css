@@ -1314,7 +1314,7 @@ h3.welcome {
     display: inline-block;
     position: absolute;
     top: 30px;
-    left: 30px; /* أو حسب مكانك المفضل */
+    right: 30px; /* أو حسب مكانك المفضل */
     z-index: 4;
     font-family: 'Poppins' !important;
 }
