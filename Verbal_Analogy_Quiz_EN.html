@@ -273,11 +273,13 @@
         function generatePrompt(difficulty, numQuestions, attempt = 1) {
             let prompt = `Generate ${numQuestions} unique verbal analogy questions in JSON format. `;
             prompt += `The difficulty level is: ${difficulty}. Use only the criteria for this level.\n`;
-            prompt += `Create entirely new questions that do not resemble any generated in previous attempts (e.g., attempt number: ${attempt - 1}).\n`;
             prompt += `Avoid reusing any words or relationships from previous questions.\n`;
             prompt += `Unique identifier for this session: ${Math.random().toString(36).substring(2, 10)}\n`;
             prompt += `Avoid reusing any words or relationships from previous questions.\n`;
-
+            prompt += `Focus on varying the types of relationships in the incorrect options.\n`;
+            prompt += `Avoid repeating the same relationship patterns within a single question.\n`;
+            prompt += `Make sure each of the four options uses a different type of relationship, such as synonym, opposite, part-whole, cause-effect, animal-voice, capital_city-country, growth and antonym ...etc. \n.`;
+            prompt += `Ensure that each incorrect option uses a different type of relationship than the question and from each other.`;
             const examples = {
                 easy: `Easy questions:
                     - **Focus:** Quick association between basic concepts.
@@ -339,14 +341,32 @@
             - Medium: Avoid direct synonyms or obvious relationships.
             - Hard: Avoid physical examples or common everyday contexts.
             `;
-
             prompt += `Ensure all options are valid and maintain a consistent format (X : Y ≠ Y : X).\n`;
+            prompt += `Important: Ensure that the three incorrect options are based on relationships that are **different** from the one used in the question pair and the correct answer.\n`;
             prompt += `Ensure that the correct answer index is between 0-3 and varies across the set.\n`;
             prompt += `Attempt number: ${attempt}.\n`;
             prompt += `Note: Any example that does not align with the difficulty criteria will be automatically rejected.\n`;
-
-            prompt +=
-            `Required format:
+            prompt += ` This requirement is mandatory and must be strictly followed.
+                        Ensure that each question has four options with completely different relationship types.
+                        Ensure The correct answer must share the same relationship as the question pair,
+                        while each of the three incorrect options must represent a different type of relationship, such as:
+                        - Synonym
+                        - Antonym
+                        - Part-whole
+                        - Whole-part
+                        - Cause-effect
+                        - Object-function
+                        - Tool-action
+                        - Profession-workplace
+                        - Color-object
+                        - Country-capital
+                        - Product-source
+                        - Sound-animal
+                        Avoid repeating the same relationship pattern within a single question.
+                        Make sure the relationships are clearly distinct and logically valid.
+                        \n`;
+            prompt += `Ensure that the correct answer index (correctIndex) varies across all questions and is not always in the same position. The correctIndex must appear in different positions (0, 1, 2, or 3) across the question set. Avoid placing the correct answer consistently in any single position. This requirement is mandatory and must be strictly followed.\n`;
+            prompt += `Required format:
                 [
                     {
                         "question": ["word1", "word2"],

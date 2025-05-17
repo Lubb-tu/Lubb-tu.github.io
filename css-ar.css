@@ -331,7 +331,7 @@ p {
 .home-image img {
     transform: scale(1);
     transition: transform 0.3s ease;
-    margin-right: 5% !important;
+    margin-right: 7% !important;
 }
 #home::after{
     position: absolute;
@@ -359,6 +359,9 @@ p {
     align-items: right; /* لمركزة العناصر أفقيًا */
  /* المسافة بين العناصر */
     margin-top: -40px;
+    padding-top: 6% !important;
+    margin-right: 1%;
+
 }
   
 
